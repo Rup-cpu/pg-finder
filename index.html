@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Finder</title>
+    <meta
+      name="description"
+      content="Easy Finder helps you discover comfortable PG stays across major cities."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div class="brand">
+            <span class="brand-mark">EF</span>
+            <div>
+              <p class="brand-label">Easy Finder</p>
+              <span class="brand-subtitle">Smart PG discovery</span>
+            </div>
+          </div>
+          <a class="topbar-link" href="#listings">Explore stays</a>
+        </nav>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">Find your next PG with confidence</p>
+            <h1>Easy Finder</h1>
+            <p class="hero-text">
+              Browse verified-style sample PG listings, compare prices, and
+              instantly filter by city to find the right fit faster.
+            </p>
+            <div class="trust-stats" aria-label="Platform trust highlights">
+              <div class="trust-item">
+                <strong>500+</strong>
+                <span>PGs listed</span>
+              </div>
+              <div class="trust-item">
+                <strong>10,000+</strong>
+                <span>users</span>
+              </div>
+              <div class="trust-item">
+                <strong>Trusted</strong>
+                <span>by students</span>
+              </div>
+            </div>
+          </div>
+
+          <section class="filter-panel" aria-label="Search PG listings">
+            <div class="filter-group search-group">
+              <label for="locationSearch">Search location</label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">&#128269;</span>
+                <input
+                  id="locationSearch"
+                  type="search"
+                  placeholder="Type a city like Pune or Bengaluru"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+
+            <div class="filter-row">
+              <div class="filter-group">
+                <label for="minPrice">Min price</label>
+                <input id="minPrice" type="number" min="0" placeholder="4000" />
+              </div>
+
+              <div class="filter-group">
+                <label for="maxPrice">Max price</label>
+                <input id="maxPrice" type="number" min="0" placeholder="15000" />
+              </div>
+            </div>
+
+            <div class="filter-meta">
+              <p id="resultsCount">0 stays available</p>
+              <button id="clearFilters" class="ghost-button" type="button">
+                Clear filters
+              </button>
+            </div>
+          </section>
+        </div>
+      </header>
+
+      <main>
+        <section class="listings-section" id="listings">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Curated listings</p>
+              <h2>Popular PG spaces across top cities</h2>
+            </div>
+            <p class="section-text">
+              A clean demo catalog with quick filtering, polished cards, and a
+              responsive layout.
+            </p>
+          </div>
+
+          <div id="noResults" class="no-results hidden" aria-live="polite">
+            <h3>No results found</h3>
+            <p>Try another city name or widen your price range.</p>
+          </div>
+
+          <div id="pgGrid" class="pg-grid" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
